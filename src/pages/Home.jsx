@@ -12,7 +12,7 @@ function Home() {
           <img src={WelcomeImage} alt="WelcomeImage" className="w-[75%] max-w-[400px]" />
         </div>
         <div className="flex flex-col items-center justify-center mt-2 lg:w-1/2 lg:items-start">
-          <h1 id="home" className="text-[#FF7723] text-[2.5rem] font-shrikhand">LE BIG BAND 64</h1>
+          <h1 id="home" className="text-[#FF7723] text-[2.2rem] sm:text-[2.5rem] font-shrikhand">LE BIG BAND 64</h1>
           <h2 className="text-black font-shrikhand text-[2.0rem] text-center leading-relaxed lg:text-start">L'énergie du Swing pour faire danser vos soirées !</h2>
           <p className="leading-loose mt-5 font-istokweb text-[0.95rem] text-justify">Nous sommes un groupe de musiciens passionnés, réunis autour du swing. Ouverts aux danseurs, nous animons vos soirées avec un répertoire irrésistible : Lindy Hop, Balboa, Blues, West Coast Swing, Tcha-Tcha… et bientôt des rythmes latinos !</p>
           <div className="flex flex-row gap-14 justify-center items-center mt-8">
