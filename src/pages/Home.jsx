@@ -132,7 +132,7 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-6 xl:flex-row xl:items-stretch mb-10">
                     <div className="xl:w-2/3 mr-10"> {/* Texte */}
-                        <h3 className="mb-3 font-semibold font-fraunces text-xl xl:text-2xl md:text-2xl">Une <span className="text-primary italic">association</span> créée il y a 10 ans.</h3>
+                        <h3 className="mb-3 font-semibold font-fraunces text-xl xl:text-2xl md:text-2xl">Une <span className="text-primary italic">association</span> créée il y a 40 ans.</h3>
                         <p className="font-montserrat text-black/75 xl:text-[1.0rem] text-justify leading-7 xl:leading-8 mb-6">
                             LE BIG BAND 64, orchestre amateur basé à Lée, a été créé en 1984 par Pierre Domengé (ancien maire de la commune).<br />
                             En 2024, sous l'impulsion de son nouveau chef Vincent Pommereau, et fort d'un effectif renforcé, le Big Band 64 est reparti sur des fondamentaux, à savoir la musique swing des big bands des années 1930 à 1950.
@@ -198,7 +198,7 @@ export default function Home() {
                             </div>
                             <div className="flex flex-col gap-5">
                                 <EventCard title='Soirée Swing au Navy Blue avec ALLonSwinguer' year="2025" date='21' month=" Novembre" location="8 rue du souvenir Français, 64230 LESCAR, France" link={"https://www.navy-blue.fr/soiree-swing"} description={<>Bienvenue dans un lieu féérique, doté d’un parquet adapté à tous les danseurs. Vibrez aux rythmes d’une playlist swing sélectionnée et laissez-vous porter par l’ambiance. Laissez-vous tenter par une initiation gratuite pour découvrir les plaisirs de la danse. Cerise sur le gâteau : un orchestre live pour faire vibrer la soirée. Un petit creux : pensez à reserver votre plateau! </>} />
-                                <EventCard title='Téléthon Nousty' date='07' month=" Décembre" year="2025" location="64420 NOUSTY, France" description={<>Le Big Band 64 vous donne rendez-vous à Nousty ce samedi à partir de midi pour un concert au profit du Téléthon.
+                                <EventCard title='Téléthon Nousty' date='07' month=" Décembre" year="2025" location="64420 NOUSTY, France" description={<>Le Big Band 64 vous donne rendez-vous à Nousty ce dimanche à partir de midi pour un concert au profit du Téléthon.
                                     Venez partager un moment convivial et solidaire en musique, autour du swing, du jazz et de la bonne humeur.
                                     Un beau moment de générosité et de rythme à ne pas manquer ! </>} />
 
@@ -242,7 +242,7 @@ export default function Home() {
                     {/* <MusicPlayer title="Tain't What You Do - Shim Sham" artist='BigBand64' duration='2:59' audioSrc={Taint_What_You_Do_Shim_Sham} /> */}
                     {/* <MusicPlayer title="Basic Basie Lée" artist='BigBand64' duration='4:26' audioSrc={Basic_Basie_Lée} />
                     <MusicPlayer title="In a Mellow Tone Lée" artist='BigBand64' duration='2:16' audioSrc={In_a_Mellow_Tone_Lée} /> */}
-                    <MusicPlayer title="Perdido Lée" artist='BigBand64' duration='3:10' audioSrc={Perdido_Lée} />
+                    <MusicPlayer title="Perdido" artist='BigBand64' duration='3:10' audioSrc={Perdido_Lée} />
                     {/* <MusicPlayer title="All of MeLée" artist='BigBand64' duration='2:48' audioSrc={All_of_MeLée} />
                     <MusicPlayer title="Don't Get Around Much Anymore" artist='BigBand64' duration='2:21' audioSrc={Dont_Get_Around_Much_Anymore} />
                     <MusicPlayer title="Fly me to the moon" artist='BigBand64' duration='2:24' audioSrc={Fly_me_to_the_moon} />

@@ -12,7 +12,7 @@ function Contact() {
 
     const contacts = [
         { icon: <IoIosMail />, name: "Téléphone", value: "06 76 67 23 59" },
-        { icon: <FaLocationDot />, name: "Adresse", value: "..." },
+        { icon: <FaLocationDot />, name: "Adresse", value: "Association AMVO Big Band 64 Mairie de Lée, 13 Avenue des Moulins 64320 Lée." },
     ];
 
     const handleSubmit = async (e) => {
