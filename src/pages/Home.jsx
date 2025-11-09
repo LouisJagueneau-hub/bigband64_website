@@ -141,7 +141,7 @@ export default function Home() {
 
 
                         </p>
-                        <h4 className="mb-3 font-semibold font-fraunces text-lg md:text-xl">Les danseurs sont aussi la bienvenue !</h4>
+                        <h4 className="mb-3 font-semibold font-fraunces text-lg md:text-xl">Les danseurs sont aussi les bienvenus !</h4>
                         <p className="font-montserrat text-black/75 text-justify xl:text-[1.0rem] leading-7 xl:leading-8 mb-8">
                             Notre mission ne s’arrête pas à la scène : nous travaillons avec des danseurs, des
                             associations et des écoles de danse, pour faire de chaque événement un moment festif et convivial.
