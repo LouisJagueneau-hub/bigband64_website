@@ -197,15 +197,16 @@ export default function Home() {
                                 <h4 className="text-xl md:text-2xl xl:text-3xl font-fraunces font-semibold">Prochainement</h4>
                             </div>
                             <div className="flex flex-col gap-5">
-                                <EventCard title='Swing’n’Roll Live by Danza Mi Pasión' year="2026" date='13' month="Mars" location="Maison pour tous, chemin du stade, 64230 ARTIGUELOUVE" link={"https://www.facebook.com/jeandenis.lakane"} description={<> Danza mi pasion vous propose un Week-end Évènementielle: 2 journées de stages et 2 soirées : 
+                                <EventCard title='Swing’n’Roll Live by Danza Mi Pasión' year="2026" date='13' month="Mars" location="Maison pour tous, chemin du stade, 64230 ARTIGUELOUVE" link={"https://www.facebook.com/jeandenis.lakane"} description={<> Danza mi pasion vous propose un Week-end Evènementiel : 2 journées de stages et 2 soirées : 
 Pour commencer, un stage d'initiation aux claquettes  américaines par la Swingin' Compagny (MJC des Fleurs à Pau) par Edwige Larralde, (championne du monde de claquettes en 2013, Chorégraphe, danseuse...) rien que pour vous à un prix mini !
 Suivi par un concert du Big Band 64 pour Swinguer en lindy hop, sur du blues, en balboa, boogie...solo jazz)
-Pendant les interludes du Big Band64  , une playlist DJ Philippe..</>} />
+Pendant les interludes du Big Band64  , une playlist DJ MATT..
+</>} />
                                 <EventCard title='Big Band à Nulle Bar Ailleurs Coarraze' year="2026" date='10' month="Mai" location="Null Bar Ailleurs, 1 rue Léo Lagrange, Coarraze, France" link={"https://www.facebook.com/profile.php?id=61551987910890"} description={<>Le Big Band 64 vous donne rendez-vous à Coarraze au Null Bar Ailleurs. Venez partager un moment convivial et solidaire en musique, autour du swing, du jazz et de la bonne humeur. Un beau moment de générosité et de rythme à ne pas manquer !</>} />
                                
                                 {/* <EventCard title='' year="" date='' month=" " location="" link={""} description={<></>} /> */}
                                
-                                <EventCard title='Fête de la musique à Lée' year="2026" date='21' month="Juin" location="Salle multi-activité, Allée de l'église, 64320 Lée" link={"#"} description={<>Le Big Band 64 vous convit à Lée pour un dimanche après-midi pour le plus grand plaisir des mélomanes et des danseurs. Programme en cours de validation.</>} />
+                                <EventCard title='Fête de la musique à Lée' year="2026" date='21' month="Juin" location="Salle multi-activité, Allée de l'église, 64320 Lée" link={"#"} description={<>Le Big Band 64 vous convie à Lée pour un dimanche après-midi pour le plus grand plaisir des mélomanes et des danseurs. Programme en cours de validation.</>} />
                                 <EventCard title='Concert Live !' year="2026" date='21' month="Novembre" location="Maison des associations, Allée Glain, Bayonne, France" link={"https://danse-feeling.fr/"} description={<>C'est avec un grand plaisir que le Big Band 64 et l'association Danse Feeling vous donne rendez vous le 21/10/2026 à Bayonne pour un concert live dans la salle Glain ! De 21h30 à 2H Concert du Big Band 64. Interlude par DJ Michel.  </>} />
 
                             </div>
