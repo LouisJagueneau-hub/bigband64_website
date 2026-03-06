@@ -197,10 +197,9 @@ export default function Home() {
                                 <h4 className="text-xl md:text-2xl xl:text-3xl font-fraunces font-semibold">Prochainement</h4>
                             </div>
                             <div className="flex flex-col gap-5">
-                                <EventCard title='Swing’n’Roll Live by Danza Mi Pasión' year="2026" date='13' month="Mars" location="Maison pour tous, chemin du stade, 64230 ARTIGUELOUVE" link={"https://www.facebook.com/jeandenis.lakane"} description={<> Danza mi pasion vous propose un Week-end Evènementiel : 2 journées de stages et 2 soirées : 
-Pour commencer, un stage d'initiation aux claquettes  américaines par la Swingin' Compagny (MJC des Fleurs à Pau) par Edwige Larralde, (championne du monde de claquettes en 2013, Chorégraphe, danseuse...) rien que pour vous à un prix mini !
-Suivi par un concert du Big Band 64 pour Swinguer en lindy hop, sur du blues, en balboa, boogie...solo jazz)
-Pendant les interludes du Big Band64  , une playlist DJ MATT..
+                                <EventCard title='Swing’n’Roll Live by Danza Mi Pasión' year="2026" date='13' month="Mars" location="Maison pour tous, chemin du stade, 64230 ARTIGUELOUVE" link={"https://www.facebook.com/jeandenis.lakane"} description={<> Danza mi pasion vous propose une soirée DJ rock pop & concert swing :
+Suivi par un concert du Big Band 64 (3 sets de 30min) pour Swinguer en lindy hop, sur du blues, en balboa, boogie...solo jazz) 21h30.
+Pendant les interludes du Big Band64  , une playlist DJ Philipe
 </>} />
                                 <EventCard title='Big Band à Nulle Bar Ailleurs Coarraze' year="2026" date='10' month="Mai" location="Null Bar Ailleurs, 1 rue Léo Lagrange, Coarraze, France" link={"https://www.facebook.com/profile.php?id=61551987910890"} description={<>Le Big Band 64 vous donne rendez-vous à Coarraze au Null Bar Ailleurs. Venez partager un moment convivial et solidaire en musique, autour du swing, du jazz et de la bonne humeur. Un beau moment de générosité et de rythme à ne pas manquer !</>} />
                                
