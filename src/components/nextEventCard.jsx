@@ -9,12 +9,12 @@ export default function NextEventCard() {
             <span className=" absolute border-b-5 border-r-5 h-6 w-6 border-primary/50 bottom-3 right-3"></span>
 
             <span className="text-primary text-[0.85rem] font-semibold font-poppins mb-2">Évènement à venir</span>
-            <h4 className="text-xl font-poppins font-bold mb-4 text-white/90">Soirée Swing au Navy Blue</h4>
+            <h4 className="text-xl font-poppins font-bold mb-4 text-white/90">Swing’n’Roll Live by Danza Mi Pasión</h4>
 
-            <p className="font-poppins text-[0.90rem] text-white/70 flex items-center gap-2 mb-4"><FaCalendar /> Vendredi 21 Novembre 2025 - 19 h</p>
+            <p className="font-poppins text-[0.90rem] text-white/70 flex items-center gap-2 mb-4"><FaCalendar /> 13 Mars 2026 - 21 h 30</p>
 
 
-            <a href="https://www.navy-blue.fr/soiree-swing" target="_blank" className="text-primary text-[0.90rem] font-poppins font-semibold flex items-center gap-2">
+            <a href="https://www.facebook.com/jeandenis.lakane" target="_blank" className="text-primary text-[0.90rem] font-poppins font-semibold flex items-center gap-2">
                 En savoir plus <FaLongArrowAltRight className="text-[1.0rem]" />
             </a>
         </div>
