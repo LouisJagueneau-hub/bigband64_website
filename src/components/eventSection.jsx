@@ -1,7 +1,7 @@
 // EventSection.jsx
 import { useState } from "react";
-import EventCard from "./EventCard";
-import EventCardFinish from "./EventCardFinish";
+import EventCard from "./eventCard.jsx";
+import EventCardFinish from "./eventCardFinish.jsx";
 import BB64_Dancer1 from "../assets/BB64_Dancer1.jpg";
 import BB64_Dancer2 from "../assets/BB64_Dancer2.jpg";
  
