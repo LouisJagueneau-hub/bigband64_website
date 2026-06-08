@@ -11,6 +11,7 @@ import MusicPlayer from "../components/musicPlayer";
 import Footer from "../components/footer";
 import Network from "../components/network";
 import ScrollToTop from "../components/scrollToTop";
+import AboutSection from "../components/aboutSection";
 
 import Taint_What_You_Do_Shim_Sham from "../assets/01_Tain't_What_You_Do-Shim Sham.mp3";
 import Basic_Basie_Lée from "../assets/02_Basic_Basie_Lée.mp3"
@@ -61,6 +62,7 @@ export default function Home() {
 
     return (
         <>
+        <NextEventCard/>
             <motion.section
                 id="home"
                 className="min-h-screen bg-cover relative bg-[position:85%_40%]"
@@ -72,23 +74,24 @@ export default function Home() {
                 <div className="absolute inset-0 bg-black/50 pointer-events-none" />
                 <Header className="relative z-20" />
 
-                <div className="relative z-10 px-6 md:px-20 lg:px-30 xl:px-40 flex flex-col justify-center xl:justify-start xl:items-start items-center pt-[110px] lg:pt-[140px] xl:pt-[160px]">
+                {/* Contenu centré */}
+                <div className="relative z-10 px-6 md:px-20 lg:px-30 xl:px-40 flex flex-col items-center justify-center text-center pt-[110px] lg:pt-[140px] xl:pt-[160px]">
 
                     <motion.div custom={0} className="mb-6 w-20 h-[5px] bg-primary rounded-md" />
 
-                    <motion.div variants={fadeInUp} custom={1} className="mb-10 text-center xl:text-start">
+                    <motion.div variants={fadeInUp} custom={1} className="mb-10">
                         <h1 className="text-primary text-4xl sm:text-6xl md:text-8xl font-fraunces font-bold mb-3">
                             Big Band 64
                         </h1>
                         <h2 className="text-white/90 text-3xl xl:text-5xl font-fraunces font-bold">
-                            L’âme du Swing dans les Pyrénées
+                            L'âme du Swing dans les Pyrénées
                         </h2>
                     </motion.div>
 
                     <motion.p
                         variants={fadeInUp}
                         custom={2}
-                        className="font-poppins md:text-[0.90rem] xl:text-[1rem] text-white/85 text-center xl:text-justify leading-6 xl:w-160 mb-6"
+                        className="font-poppins md:text-[0.90rem] xl:text-[1rem] text-white/85 leading-6 max-w-2xl mb-8"
                     >
                         Nous sommes un groupe de musiciens passionnés, réunis autour du swing. Ouverts aux danseurs, nous animons vos soirées avec nos morceaux Jazz : Lindy Hop, Balboa, Blues, West Coast Swing, Tcha-Tcha… et bientôt des rythmes latinos !
                     </motion.p>
@@ -96,85 +99,30 @@ export default function Home() {
                     <motion.div variants={fadeInUp} custom={3} className="flex flex-col sm:flex-row items-center font-poppins gap-4 mb-15">
                         <button
                             onClick={() => document.getElementById("event").scrollIntoView({ behavior: "smooth" })}
-                            className="bg-primary border border-primary rounded-md px-4 py-2 text-white flex items-center gap-2 hover:bg-primary/80 transition"
+                            className="bg-primary border cursor-pointer border-primary rounded-md px-4 py-2 text-white flex items-center gap-2 hover:bg-[#cc5f1b] transition"
                         >
                             <FaLongArrowAltRight className="text-xl" /> Nos Évènements
                         </button>
                         <button
                             onClick={() => document.getElementById("music").scrollIntoView({ behavior: "smooth" })}
-                            className="bg-black/50 border border-primary rounded-md px-4 py-2 text-primary flex items-center gap-2 hover:bg-black/70 transition"
+                            className="bg-black/50 border cursor-pointer border-primary rounded-md px-4 py-2 text-primary flex items-center gap-2 hover:bg-white/90 transition"
                         >
                             <IoMdMusicalNote className="text-xl" /> Nos Morceaux
                         </button>
                     </motion.div>
 
-                    <motion.div variants={fadeInUp} custom={4} className="mb-8 xl:absolute right-0 bottom-5">
-                        <NextEventCard />
-                    </motion.div>
-
-                    <motion.div variants={fadeInUp} custom={5} className="hidden xl:absolute xl:flex right-0 bottom-70">
+                    {/* Network reste en absolute à droite si besoin */}
+                    <motion.div variants={fadeInUp} custom={4} className="hidden xl:absolute xl:flex right-0 top-1/2 -translate-y-1/2">
                         <Network />
                     </motion.div>
+
                 </div>
             </motion.section>
 
-            <section id="about" className="my-15 px-6 md:px-20 lg:px-30 xl:px-40">
-                <div className="flex flex-col items-center mb-10"> { /* Title */}
-                    <div className="flex flex-row gap-1 items-center mb-4">
-                        <span className="bg-primary h-3 w-2 rounded-t-full rounded-b-full"></span>
-                        <span className="bg-primary h-5 w-2 rounded-t-full rounded-b-full"></span>
-                        <span className="bg-primary h-10 w-2 rounded-t-full rounded-b-full"></span>
-                        <span className="bg-primary h-5 w-2 rounded-t-full rounded-b-full"></span>
-                        <span className="bg-primary h-3 w-2 rounded-t-full rounded-b-full"></span>
-                    </div>
-                    <h2 className="text-2xl md:text-4xl text-center font-bold font-fraunces mb-2">Qui Sommes Nous ?</h2>
-                    <span className="text-md md:text-lg text-center font-fraunces text-primary font-semibold">Une Association et un Orchestre</span>
-                </div>
-                <div className="flex flex-col gap-6 xl:flex-row xl:items-stretch mb-10">
-                    <div className="xl:w-2/3 mr-10"> {/* Texte */}
-                        <h3 className="mb-3 font-semibold font-fraunces text-xl xl:text-2xl md:text-2xl">Une <span className="text-primary italic">association</span> créée il y a 40 ans.</h3>
-                        <p className="font-montserrat text-black/75 xl:text-[1.0rem] text-justify leading-7 xl:leading-8 mb-6">
-                            LE BIG BAND 64, orchestre amateur basé à Lée, a été créé en 1984 par Pierre Domengé (ancien maire de la commune).<br />
-                            En 2024, sous l'impulsion de son nouveau chef Vincent Pommereau, et fort d'un effectif renforcé, le Big Band 64 est reparti sur des fondamentaux, à savoir la musique swing des big bands des années 1930 à 1950.
-                            Les répétitions hebdomadaires à la salle multi-activités de Lée sont suivies assidûment tous les lundis de 18h à 20 heures, et sont désormais ouvertes au public. <br />
+  
 
+            <AboutSection/>
 
-
-                        </p>
-                        <h4 className="mb-3 font-semibold font-fraunces text-lg md:text-xl">Les danseurs sont aussi les bienvenus !</h4>
-                        <p className="font-montserrat text-black/75 text-justify xl:text-[1.0rem] leading-7 xl:leading-8 mb-8">
-                            Notre mission ne s’arrête pas à la scène : nous travaillons avec des danseurs, des
-                            associations et des écoles de danse, pour faire de chaque événement un moment festif et convivial.
-                        </p>
-
-                        <div>
-                            <Numbers />
-                        </div>
-                    </div>
-                    <div className="p-6 bg-[#ffe4d3] rounded-md shadow-md xl:w-1/3 relative flex flex-col gap-4"> {/* Photo */}
-                        <img className="h-1/2 object-cover rounded-md shadow-md" src={BB64_group1} alt="BB64_group1" />
-                        <img className="h-1/2 rounded-md xl:object-cover shadow-md" src={temp_image2} alt="BB64_Dancer2" />
-                        {/* <img className="w-full h-50 object-cover rounded-md shadow-md" src={BB64_Instrument} alt="BB64_Instrument" /> */}
-
-                        {/* <div className="grid grid-cols-1 gap-4 h-full border-2">
-                            <img className="rounded-md xl:h-50 xl:object-cover shadow-md" src={BB64_Dancer1} alt="BB64_Dancer1" />
-                        </div> */}
-                    </div>
-                </div>
-                <div>
-                    <h3 className="mb-3 font-semibold font-fraunces text-xl md:text-2xl mt-10">Ils parlent de nous...</h3>
-                    <p className="font-montserrat text-black/75 text-justify leading-7 xl:leading-8 xl:text-[1.1rem] mb-10">
-                        Lors de nos évènements, nous avons la chance d’avoir la présence de certains médias à nos côtés. Si vous le souhaitez vous pouvez consulter les articles liés à notre association.
-                    </p>
-                    <div className="flex gap-6 flex-col md:grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"> {/* Card des articles de presse */}
-                        <ArtcilesCard name="SudOuest" logo={Logo_Sud_Ouest} date='20 Septembre 2025' title='En images : autour d’une visite nocturne de l’expo Robert Doisneau, swing devant le musée des Beaux-Arts de Pau' color="#fbe1e1" link="https://www.sudouest.fr/culture/expositions/en-images-autour-d-une-visite-nocturne-de-l-expo-robert-doisneau-swing-devant-le-musee-des-beaux-arts-de-pau-25819715.php?fbclid=IwZXh0bgNhZW0CMTEAAR5gsgwFcSHXV6TPjRoGUueg3XBQ0DW39suz6UoKHWt680bam7lETMX3IL5W6g_aem_o0j7oAOknrhM-fAfgWJ1dw&sfnsn=scwspwa" />
-                        <ArtcilesCard name="La Rép des Pyrénées" logo={RepImage} date='16 Juin 2025' title='Lée : le Big Band 64 organise un concert pour la Fête de la musique' color="#B4E4FC" link="https://www.larepubliquedespyrenees.fr/lieux/pyrenees-atlantiques/lee/lee-le-big-band-64-organise-un-concert-pour-la-fete-de-la-musique-24809391.php" />
-
-                    </div>
-                </div>
-
-
-            </section>
 
             <section id="event" className="py-15 bg-[#fff2e9]">
                 <div className=" mx-6 md:mx-20 lg:mx-30">
@@ -197,11 +145,11 @@ export default function Home() {
                                 <h4 className="text-xl md:text-2xl xl:text-3xl font-fraunces font-semibold">Prochainement</h4>
                             </div>
                             <div className="flex flex-col gap-5">
-                                <EventCard title='Big Band à Nulle Bar Ailleurs Coarraze' year="2026" date='10' month="Mai" location="Null Bar Ailleurs, 1 rue Léo Lagrange, Coarraze, France" link={"https://www.facebook.com/profile.php?id=61551987910890"} description={<>Le Big Band 64 vous donne rendez-vous à Coarraze au Null Bar Ailleurs. Venez partager un moment convivial et solidaire en musique, autour du swing, du jazz et de la bonne humeur. Un beau moment de générosité et de rythme à ne pas manquer !</>} />
-                               
+                                <EventCard title='Évènement NAVY BLUE' year="2026" date='12' month="Juin" location="NAVY BLUE , Rue du Souvenir Français, 64230 Lescar, France" link={"https://www.navy-blue.fr/reservation"} description={<>Dès 19h00, profitez d’un repas convivial suivi d’une initiation au Shim Sham. À partir de 21h30, place à la danse avec le Big Band 64 pour une grande soirée au tarif de 10 €. Au programme : swing, un zeste de West Coast Swing, du boogie et des démonstrations de nos élèves pour une ambiance festive et chaleureuse !</>} />
+
                                 {/* <EventCard title='' year="" date='' month=" " location="" link={""} description={<></>} /> */}
-                               
-                                <EventCard title='Fête de la musique à Lée' year="2026" date='21' month="Juin" location="Salle multi-activité, Allée de l'église, 64320 Lée" link={"#"} description={<>Le Big Band 64 vous convie à Lée pour un dimanche après-midi pour le plus grand plaisir des mélomanes et des danseurs. Programme en cours de validation.</>} />
+
+                                <EventCard title='Fête de la musique à Lée' year="2026" date='21' month="Juin" location="Salle multi-activité, Allée de l'église, 64320 Lée" link={"https://www.lee64.fr/culture-sports-et-loisirs/les-associations#big-band-64"} description={<>Le Big Band 64 vous convie à Lée pour un dimanche après-midi pour le plus grand plaisir des mélomanes et des danseurs.</>} />
                                 <EventCard title='Concert Live !' year="2026" date='21' month="Novembre" location="Maison des associations, Allée Glain, Bayonne, France" link={"https://danse-feeling.fr/"} description={<>C'est avec un grand plaisir que le Big Band 64 et l'association Danse Feeling vous donne rendez vous le 21/10/2026 à Bayonne pour un concert live dans la salle Glain ! De 21h30 à 2H Concert du Big Band 64. Interlude par DJ Michel.  </>} />
 
                             </div>
@@ -213,7 +161,7 @@ export default function Home() {
                                 <h4 className="text-xl md:text-2xl font-fraunces font-semibold">Terminé</h4>
                             </div>
                             <div className="flex flex-col gap-6">
-                                <EventCardFinish image={BB64_Dancer1} date="05 Septembre 2025" title='Danse ta ville' location="11 Rue Mathieu Lalanne, 64000 Pau, France" description={<> 
+                                <EventCardFinish image={BB64_Dancer1} date="05 Septembre 2025" title='Danse ta ville' location="11 Rue Mathieu Lalanne, 64000 Pau, France" description={<>
                                     Merci au public et particulièrement à tous les danseurs, au Lindy Rocket Club, à la Swingin'Compagnie pour l'énergie Swing partagée avec le Big Band 64 au Musée des beaux-arts de Pau
                                 </>} />
                                 <EventCardFinish image={BB64_Dancer2} date="22 juin 2025" title='Fête de la musique' location="Lée, France" description={<>Un immense merci à la commune de Lée et les danseurs d'être venus partager leur passion lors de la fête de la musique. Remerciement pour les animations offertes du Lindy Rocket Club,Let's Dance et La Swingin'compagnie aux claquettes.</>} />

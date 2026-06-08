@@ -1,24 +1,39 @@
-import { FaLongArrowAltRight } from "react-icons/fa"
+import { FaLongArrowAltRight } from "react-icons/fa";
 
-export default function ArtcilesCard({name, date, title, link, logo, color}) {
-    return(
-        <div style={{ borderLeftColor: color }} className={`py-6 px-10 border-y-1 border-y-black/20 border-r-1 border-r-black/20 border-l-14 rounded-xl`}>
-            <div className="flex flex-col">
-                <div className="flex flex-row items-center mb-2 gap-4">
-                    <div className="md:w-15 md:h-15 xl:w-10 xl:h-10 w-10 h-10">
-                        <img className="rounded-sm w-full h-full" src={logo} alt={logo} />
-                    </div>
-                    <div className="flex flex-col">
-                        <span className="text-lg md:text-xl font-semibold font-fraunces">{name}</span>
-                        <span className="font-fraunces text-[0.70rem] md:text-[0.90rem]">{date}</span>
+export default function ArtcilesCard({ name, logo, date, title, accentColor = "#E8601C", link }) {
+    return (
+        <a
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            className="group flex bg-white rounded-xl overflow-hidden border border-black/8 shadow-sm hover:shadow-md transition-shadow duration-200 no-underline"
+        >
+            {/* Accent latéral coloré */}
+            <div className="w-1 flex-shrink-0" style={{ background: accentColor }} />
+
+            <div className="flex flex-col p-5 flex-1">
+                {/* Header : logo + nom + date */}
+                <div className="flex items-center gap-3 pb-3 border-b border-black/8 mb-4">
+                    <img src={logo} alt={name} className="h-7 w-7 object-contain rounded" />
+                    <div>
+                        <p className="font-poppins font-bold text-[13px] text-black/85 leading-none mb-0.5">{name}</p>
+                        <p className="font-poppins text-[11px] text-black/40 leading-none">{date}</p>
                     </div>
                 </div>
-                <div className="bg-black h-[2px] w-full mb-4"></div>
-                <div className="mb-8">
-                    <h4 className="font-fraunces text-md md:text-xl xl:text-2xl">{title}</h4>
-                </div>  
-                <a href={link} target="_blank" className="text-black/70 font-light font-fraunces flex flex-row items-center gap-2 text-lg underline">Voir l'article</a>
+
+                {/* Titre de l'article */}
+                <p className="font-fraunces font-bold text-[15px] text-black/85 leading-snug mb-4 flex-1">
+                    {title}
+                </p>
+
+                {/* CTA */}
+                <span
+                    className="inline-flex items-center gap-1.5 text-[12px] font-semibold font-poppins transition-gap duration-150 group-hover:gap-2.5"
+                    style={{ color: accentColor }}
+                >
+                    Voir l'article <FaLongArrowAltRight className="text-[0.75rem]" />
+                </span>
             </div>
-        </div>
-    )
+        </a>
+    );
 }
