@@ -3,7 +3,7 @@
 // La mosaïque s'étend sur toute la hauteur de la colonne (texte + stats)
  
 import { useEffect, useRef } from "react";
-import Numbers from "./Numbers";
+// import Numbers from "./Numbers";
 import ArtcilesCard from "./articleCard.jsx";
 import BB64_group1 from "../assets/BB64_group1.jpg";
 import temp_image2 from "../assets/temp_image2.jpg";
