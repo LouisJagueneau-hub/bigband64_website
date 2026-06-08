@@ -12,6 +12,7 @@ import Footer from "../components/footer";
 import Network from "../components/network";
 import ScrollToTop from "../components/scrollToTop";
 import AboutSection from "../components/aboutSection";
+import EventSection from "../components/eventSection";
 
 import Taint_What_You_Do_Shim_Sham from "../assets/01_Tain't_What_You_Do-Shim Sham.mp3";
 import Basic_Basie_Lée from "../assets/02_Basic_Basie_Lée.mp3"
@@ -124,53 +125,7 @@ export default function Home() {
             <AboutSection/>
 
 
-            <section id="event" className="py-15 bg-[#fff2e9]">
-                <div className=" mx-6 md:mx-20 lg:mx-30">
-                    <div className="flex flex-col items-center mb-10"> { /* Title */}
-                        <div className="flex flex-row gap-1 items-center mb-4">
-                            <span className="bg-primary h-3 w-2 rounded-t-full rounded-b-full"></span>
-                            <span className="bg-primary h-5 w-2 rounded-t-full rounded-b-full"></span>
-                            <span className="bg-primary h-10 w-2 rounded-t-full rounded-b-full"></span>
-                            <span className="bg-primary h-5 w-2 rounded-t-full rounded-b-full"></span>
-                            <span className="bg-primary h-3 w-2 rounded-t-full rounded-b-full"></span>
-                        </div>
-                        <h2 className="text-2xl md:text-4xl font-bold font-fraunces mb-2">Évènements</h2>
-                        <span className="text-md md:text-lg font-fraunces text-primary font-semibold">Les futurs et les passés</span>
-                    </div>
-
-                    <div>
-                        <div className="mb-10 xl:mx-40">
-                            <div className="flex items-center gap-3 mb-4">
-                                <span className="h-3 w-3 bg-primary rounded-full"></span>
-                                <h4 className="text-xl md:text-2xl xl:text-3xl font-fraunces font-semibold">Prochainement</h4>
-                            </div>
-                            <div className="flex flex-col gap-5">
-                                <EventCard title='Évènement NAVY BLUE' year="2026" date='12' month="Juin" location="NAVY BLUE , Rue du Souvenir Français, 64230 Lescar, France" link={"https://www.navy-blue.fr/reservation"} description={<>Dès 19h00, profitez d’un repas convivial suivi d’une initiation au Shim Sham. À partir de 21h30, place à la danse avec le Big Band 64 pour une grande soirée au tarif de 10 €. Au programme : swing, un zeste de West Coast Swing, du boogie et des démonstrations de nos élèves pour une ambiance festive et chaleureuse !</>} />
-
-                                {/* <EventCard title='' year="" date='' month=" " location="" link={""} description={<></>} /> */}
-
-                                <EventCard title='Fête de la musique à Lée' year="2026" date='21' month="Juin" location="Salle multi-activité, Allée de l'église, 64320 Lée" link={"https://www.lee64.fr/culture-sports-et-loisirs/les-associations#big-band-64"} description={<>Le Big Band 64 vous convie à Lée pour un dimanche après-midi pour le plus grand plaisir des mélomanes et des danseurs.</>} />
-                                <EventCard title='Concert Live !' year="2026" date='21' month="Novembre" location="Maison des associations, Allée Glain, Bayonne, France" link={"https://danse-feeling.fr/"} description={<>C'est avec un grand plaisir que le Big Band 64 et l'association Danse Feeling vous donne rendez vous le 21/10/2026 à Bayonne pour un concert live dans la salle Glain ! De 21h30 à 2H Concert du Big Band 64. Interlude par DJ Michel.  </>} />
-
-                            </div>
-                        </div>
-
-                        <div className="mb-10 xl:mx-40">
-                            <div className="flex items-center gap-3 mb-4">
-                                <span className="h-3 w-3 bg-primary rounded-full"></span>
-                                <h4 className="text-xl md:text-2xl font-fraunces font-semibold">Terminé</h4>
-                            </div>
-                            <div className="flex flex-col gap-6">
-                                <EventCardFinish image={BB64_Dancer1} date="05 Septembre 2025" title='Danse ta ville' location="11 Rue Mathieu Lalanne, 64000 Pau, France" description={<>
-                                    Merci au public et particulièrement à tous les danseurs, au Lindy Rocket Club, à la Swingin'Compagnie pour l'énergie Swing partagée avec le Big Band 64 au Musée des beaux-arts de Pau
-                                </>} />
-                                <EventCardFinish image={BB64_Dancer2} date="22 juin 2025" title='Fête de la musique' location="Lée, France" description={<>Un immense merci à la commune de Lée et les danseurs d'être venus partager leur passion lors de la fête de la musique. Remerciement pour les animations offertes du Lindy Rocket Club,Let's Dance et La Swingin'compagnie aux claquettes.</>} />
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           <EventSection/>
 
             <section id="music" className="my-15 mx-6 md:px-20 lg:px-30">
                 <div className="flex flex-col items-center mb-10"> { /* Title */}
